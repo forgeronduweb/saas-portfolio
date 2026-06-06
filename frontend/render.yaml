@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: forgeron-du-web
+    env: static
+    buildCommand: echo "No build command needed"
+    staticPublishPath: .
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
