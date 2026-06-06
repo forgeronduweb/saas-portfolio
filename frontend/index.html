@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgeron du web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600&family=Geist:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Mobile toggle -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+    </button>
+
+    <div class="layout">
+
+        <!-- ─── SIDEBAR ─── -->
+        <aside class="sidebar" id="sidebar">
+            <button class="sidebar-close" id="sidebarClose">
+                ‹
+            </button>
+            <div class="sidebar-logo">
+                <a class="logo-mark" href="#">
+                    <div>
+                        <div class="logo-text">Forgeron du web</div>
+                        <div class="logo-sub">Byevrardbaho</div>
+                    </div>
+                </a>
+            </div>
+
+            <nav>
+                <div class="nav-section">
+                    <div class="nav-label">Navigation</div>
+                    <a class="nav-link active" data-section="home">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                            <polyline points="9,22 9,12 15,12 15,22" />
+                        </svg>
+                        Accueil
+                    </a>
+                    <a class="nav-link" data-section="about">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                        À propos
+                    </a>
+                    <a class="nav-link" data-section="projects">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7" />
+                            <rect x="14" y="3" width="7" height="7" />
+                            <rect x="14" y="14" width="7" height="7" />
+                            <rect x="3" y="14" width="7" height="7" />
+                        </svg>
+                        Projets
+                    </a>
+                    <a class="nav-link" data-section="blog">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                            <polyline points="14,2 14,8 20,8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                        </svg>
+                        Articles
+                    </a>
+                    <a class="nav-link" data-section="contact">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        Contact
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-label">Liens</div>
+                    <a class="nav-link" href="https://github.com" target="_blank">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                        </svg>
+                        GitHub
+                    </a>
+                    <a class="nav-link" href="https://linkedin.com" target="_blank">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a class="btn-hero-secondary" href="https://pay.wave.com/m/M_ci_EHkHAnIfZ2FV/c/ci/?amount=1000">
+                    Faire un don
+                </a>
+            </div>
+        </aside>
+
+        <!-- ─── MAIN ─── -->
+        <main class="main">
+
+            <!-- Topbar -->
+            <div class="topbar">
+                <div class="breadcrumb">
+                    <span>forgeronduweb</span>
+                    <span>/</span>
+                    <span id="breadcrumbCurrent" style="color:var(--text-muted)">home</span>
+                </div>
+                <div class="topbar-actions">
+                    <a class="btn-outline" href="mailto:evrard@email.com">Email</a>
+                    <a class="btn-primary" href="#" onclick="showSection('contact'); return false;">Me contacter</a>
+                </div>
+            </div>
+
+            <div class="content">
+
+                <!-- ════════════ HOME ════════════ -->
+                <div class="section active" id="section-home">
+                    <div class="hero">
+                        <div class="hero-badge">
+                            <span class="status-dot"></span>
+                            <span class="status-text">Ouvert aux missions</span>
+                        </div>
+                        <h1>Je construis des<br><em>expériences web</em><br>qui durent.</h1>
+                        <p class="hero-desc">
+                            Développeur fullstack basé à Abidjan, spécialisé en React, Next.js et Node.js.
+                            Je transforme des idées en produits digitaux — du prototype au déploiement.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="btn-hero-primary" href="#" onclick="showSection('projects'); return false;">
+                                Voir mes projets
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                            <a class="btn-hero-secondary" href="#" onclick="showSection('blog'); return false;">
+                                Lire mes articles
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="stats-strip">
+                        <div class="stat-item">
+                            <div class="stat-num">12+</div>
+                            <div class="stat-label">Projets réalisés</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">3+</div>
+                            <div class="stat-label">Années d'XP</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">8</div>
+                            <div class="stat-label">Technos maîtrisées</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">∞</div>
+                            <div class="stat-label">Café consommé</div>
+                        </div>
+                    </div>
+
+                    <div class="callout" style="margin-top:24px;">
+                        <div>
+                            <strong style="color:var(--text)">Actuellement disponible</strong> pour des missions
+                            freelance et projets en collaboration.
+                            Stack principale : React · Next.js · Node.js · TypeScript.
+                        </div>
+                    </div>
+
+                    <div class="terminal">
+                        <div class="terminal-bar">
+                            <div class="dot r"></div>
+                            <div class="dot y"></div>
+                            <div class="dot g"></div>
+                            <div class="terminal-title">evrard@dev — bash</div>
+                        </div>
+                        <div class="terminal-body">
+                            <div><span class="t-comment"># Bienvenue sur mon portfolio</span></div>
+                            <div><span class="t-prompt">→</span> <span class="t-cmd">cat about.json</span></div>
+                            <div>&nbsp;</div>
+                            <div>{</div>
+                            <div>&nbsp;&nbsp;<span class="t-key">"nom"</span>: <span class="t-str">"Philomé Evrard
+                                    BAHO"</span>,</div>
+                            <div>&nbsp;&nbsp;<span class="t-key">"role"</span>: <span class="t-str">"Développeur
+                                    Fullstack"</span>,</div>
+                            <div>&nbsp;&nbsp;<span class="t-key">"location"</span>: <span class="t-str">"Abidjan, Côte
+                                    d'Ivoire"</span>,</div>
+                            <div>&nbsp;&nbsp;<span class="t-key">"stack"</span>: [<span class="t-str">"React"</span>,
+                                <span class="t-str">"Next.js"</span>, <span class="t-str">"Node.js"</span>, <span
+                                    class="t-str">"TypeScript"</span>],
+                            </div>
+                            <div>&nbsp;&nbsp;<span class="t-key">"open_to"</span>: <span class="t-val">true</span></div>
+                            <div>}</div>
+                            <div>&nbsp;</div>
+                            <div><span class="t-prompt">→</span> <span class="t-cmd">_</span><span
+                                    style="animation:pulse 1s infinite;display:inline-block">▋</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ════════════ ABOUT ════════════ -->
+                <div class="section" id="section-about">
+                    <div class="page-header">
+                        <h2>À propos</h2>
+                        <p>Développeur, constructeur, apprenant perpétuel.</p>
+                    </div>
+                    <div class="about-grid">
+                        <div class="about-main">
+                            <div class="about-avatar">
+                                <img src="img/profil2.png" alt="Avatar" />
+                            </div>
+                            <div class="about-name">Philomé Evrard BAHO</div>
+                            <div class="about-role">Développeur Fullstack · Bingerville, CI</div>
+                            <div class="about-bio">
+                                <p>
+                                    Passionné par le web depuis mes débuts à l'École2Chance, j'ai transformé une
+                                    reconversion en véritable vocation. Aujourd'hui, je construis des interfaces et des
+                                    systèmes qui répondent à de vrais problèmes.
+                                </p>
+                                <p>
+                                    Titulaire d'une Licence en Informatique spécialité E-Commerce & Marketing Digital de
+                                    l'UVCI (mention Bien), je combine une approche technique solide avec une sensibilité
+                                    produit développée au fil de mes expériences.
+                                </p>
+                                <p>
+                                    Au quotidien, je travaille sur la gestion de portefeuille client chez Lumos CI, tout
+                                    en développant des projets freelance — du marketplace de chauffeurs KONDUI CI à des
+                                    dashboards analytiques en Chart.js.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about-side">
+                            <div class="info-block">
+                                <div class="info-title">Stack principale</div>
+                                <div class="skill-tags">
+                                    <span class="tag blue">React</span>
+                                    <span class="tag blue">Next.js</span>
+                                    <span class="tag blue">TypeScript</span>
+                                    <span class="tag blue">Node.js</span>
+                                    <span class="tag blue">NestJS</span>
+                                </div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-title">Outils & DevOps</div>
+                                <div class="skill-tags">
+                                    <span class="tag">Git / GitHub</span>
+                                    <span class="tag">Docker</span>
+                                    <span class="tag">Jest</span>
+                                    <span class="tag">CI/CD</span>
+                                    <span class="tag">Prisma</span>
+                                </div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-title">Certifications</div>
+                                <ul class="info-list">
+                                    <li>GoMyCode — Software Development</li>
+                                    <li>Macquarie / Coursera — Excel & Data</li>
+                                    <li>Orange Digital Center — Dev Web</li>
+                                    <li>UVCI — Web & Mobile Dev</li>
+                                </ul>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-title">Langues</div>
+                                <div class="skill-tags">
+                                    <span class="tag green">Français — Natif</span>
+                                    <span class="tag">Anglais — Pro</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ════════════ PROJECTS ════════════ -->
+                <div class="section" id="section-projects">
+                    <div class="page-header">
+                        <h2>Projets</h2>
+                        <p>Ce que j'ai construit — produits, outils, et expériences.</p>
+                    </div>
+                    <div class="projects-filters">
+                        <button class="filter-btn active">Tous</button>
+                        <button class="filter-btn">Fullstack</button>
+                        <button class="filter-btn">Frontend</button>
+                        <button class="filter-btn">Dashboards</button>
+                    </div>
+                    <div class="projects-grid">
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-icon"> </div>
+                                <div class="project-status wip">En cours</div>
+                            </div>
+                            <div class="project-name">KONDUI CI</div>
+                            <div class="project-desc">Marketplace de mise en relation chauffeurs-employeurs en Côte
+                                d'Ivoire. Profils conducteurs, offres d'emploi, listings véhicules commerciaux.</div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Prisma</span>
+                            </div>
+                            <div class="project-links">
+                                <a class="project-link" href="#">↗ Démo</a>
+                                <a class="project-link" href="#">⌥ GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-icon"> </div>
+                                <div class="project-status live">Live</div>
+                            </div>
+                            <div class="project-name">Dashboard SAV — Lumos CI</div>
+                            <div class="project-desc">Tableau de bord interactif de suivi des tickets SAV (batterie,
+                                ports, IDU) par ville. Construit avec Chart.js à partir de données réelles.</div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Chart.js</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Excel</span>
+                            </div>
+                            <div class="project-links">
+                                <a class="project-link" href="#">↗ Aperçu</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-icon"> </div>
+                                <div class="project-status wip">En cours</div>
+                            </div>
+                            <div class="project-name">App IA Générative</div>
+                            <div class="project-desc">Application Next.js intégrant plusieurs APIs d'IA — génération de
+                                texte, analyse d'images et traitement de documents PDF.</div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">OpenAI API</span>
+                                <span class="tech-tag">TypeScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a class="project-link" href="#">⌥ GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-icon"> </div>
+                                <div class="project-status live">Live</div>
+                            </div>
+                            <div class="project-name">Marketplace Smartphones Premium</div>
+                            <div class="project-desc">Concept de plateforme e-commerce dédiée aux smartphones haut de
+                                gamme en Côte d'Ivoire, avec stratégie de confiance et de positionnement marché.</div>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TailwindCSS</span>
+                                <span class="tech-tag">Node.js</span>
+                            </div>
+                            <div class="project-links">
+                                <a class="project-link" href="#">↗ Démo</a>
+                                <a class="project-link" href="#">⌥ GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-icon"> </div>
+                                <div class="project-status live">Live</div>
+                            </div>
+                            <div class="project-name">CV Interactif HTML</div>
+                            <div class="project-desc">Curriculum vitae en HTML/CSS avec design moderne, sections animées
+                                et version imprimable — conçu pour les candidatures digitales.</div>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a class="project-link" href="#">↗ Voir</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card" style="background: rgba(255,255,255,0.01); cursor:default;">
+                            <div
+                                style="height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 20px; text-align:center; gap:12px;">
+                                <div style="font-size:28px; opacity:0.2">+</div>
+                                <div style="font-size:12px; color:var(--text-faint); font-family:var(--mono)">Prochain
+                                    projet à venir</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ════════════ BLOG ════════════ -->
+                <div class="section" id="section-blog">
+                    <div class="page-header">
+                        <h2>Articles</h2>
+                        <p>Réflexions techniques, retours d'expérience et perspectives dev.</p>
+                    </div>
+
+                    <div class="blog-list" id="blog-list">
+                        <div class="blog-post" onclick="showArticle('ai-stackoverflow')">
+                            <div>
+                                <div class="blog-meta">
+                                    <span class="blog-cat">IA & Dev</span>
+                                    <span class="blog-date">14 mai 2025</span>
+                                </div>
+                                <div class="blog-title">IA vs Stack Overflow : la fin du copier-coller ou le début d'une
+                                    nouvelle dépendance ?</div>
+                                <div class="blog-excerpt">Comment les LLMs transforment la façon dont on cherche et on
+                                    comprend les solutions — et pourquoi ça change notre rapport à l'apprentissage.
+                                </div>
+                            </div>
+                            <div class="blog-read">5 min ↗</div>
+                        </div>
+
+                        <div class="blog-post" onclick="showArticle('orm-relations')">
+                            <div>
+                                <div class="blog-meta">
+                                    <span class="blog-cat">Backend</span>
+                                    <span class="blog-date">2 avr. 2025</span>
+                                </div>
+                                <div class="blog-title">ORM et relations : OneToMany, ManyToMany — quand ça casse et
+                                    pourquoi</div>
+                                <div class="blog-excerpt">Un retour concret sur les pièges des relations avec Prisma et
+                                    TypeORM, et les patterns qui m'ont sauvé du débogage infini.</div>
+                            </div>
+                            <div class="blog-read">7 min ↗</div>
+                        </div>
+
+                        <div class="blog-post" onclick="showArticle('nextjs-deploy')">
+                            <div>
+                                <div class="blog-meta">
+                                    <span class="blog-cat">DevOps</span>
+                                    <span class="blog-date">18 fév. 2025</span>
+                                </div>
+                                <div class="blog-title">Déployer une app Next.js avec Docker et GitHub Actions : le
+                                    guide pas à pas</div>
+                                <div class="blog-excerpt">De zéro à une pipeline CI/CD fonctionnelle — comment j'ai
+                                    automatisé mes déploiements sans passer par Vercel.</div>
+                            </div>
+                            <div class="blog-read">10 min ↗</div>
+                        </div>
+
+                        <div class="blog-post" onclick="showArticle('kondui-product')">
+                            <div>
+                                <div class="blog-meta">
+                                    <span class="blog-cat">Produit</span>
+                                    <span class="blog-date">3 jan. 2025</span>
+                                </div>
+                                <div class="blog-title">KONDUI CI : construire un produit pour un marché informel</div>
+                                <div class="blog-excerpt">Leçons apprises en designant un marketplace de chauffeurs pour
+                                    la Côte d'Ivoire — entre contraintes techniques et réalités terrain.</div>
+                            </div>
+                            <div class="blog-read">8 min ↗</div>
+                        </div>
+                    </div>
+
+                    <!-- Article views -->
+                    <div class="article-view" id="article-ai-stackoverflow">
+                        <div class="article-back" onclick="hideArticle()">← Retour aux articles</div>
+                        <h1 class="article-h1">IA vs Stack Overflow : la fin du copier-coller ou le début d'une nouvelle
+                            dépendance ?</h1>
+                        <div class="article-meta">
+                            <span>14 mai 2025</span>
+                            <span>5 min de lecture</span>
+                            <span>IA & Dev</span>
+                        </div>
+                        <div class="article-body">
+                            <p>Depuis que les LLMs sont devenus accessibles à tous, la manière dont les développeurs
+                                résolvent leurs problèmes a changé. Stack Overflow accusait déjà une baisse de trafic
+                                significative avant l'arrivée massive de ChatGPT — depuis, c'est une tendance confirmée.
+                            </p>
+                            <h2>Ce qu'on a gagné</h2>
+                            <p>La réponse instantanée. Fini d'éplucher dix fils de discussion pour trouver la seule
+                                réponse qui correspond exactement à ta version de Node ou ta config Webpack. Tu décris
+                                ton problème en langage naturel, tu obtiens une réponse contextualisée.</p>
+                            <p>Pour un dev qui débute, c'est révolutionnaire. Pour un dev confirmé, c'est un gain de
+                                temps massif sur les tâches répétitives — écrire un test unitaire, générer un type
+                                TypeScript depuis un objet, transformer un tableau de données.</p>
+                            <h2>Ce qu'on a peut-être perdu</h2>
+                            <p>Le débogage actif. Quand tu cherchais sur SO, tu lisais les mauvaises réponses aussi. Tu
+                                comprenais <em>pourquoi</em> ça ne marchait pas dans certains cas. Avec l'IA, on accepte
+                                souvent la première réponse plausible sans vraiment tester les cas limites.</p>
+                            <p>La réponse en <code>copy-paste</code> a changé de forme — elle est maintenant plus
+                                longue, mieux présentée, mais le risque de comprendre superficiellement reste le même.
+                            </p>
+                            <h2>Mon approche</h2>
+                            <p>J'utilise l'IA comme un pair programmer, pas comme un moteur de recherche. Je lui
+                                explique mon contexte complet, je lis le code généré ligne par ligne, et je teste chaque
+                                cas. La différence n'est pas dans l'outil — elle est dans l'intention.</p>
+                        </div>
+                    </div>
+
+                    <div class="article-view" id="article-orm-relations">
+                        <div class="article-back" onclick="hideArticle()">← Retour aux articles</div>
+                        <h1 class="article-h1">ORM et relations : OneToMany, ManyToMany — quand ça casse et pourquoi
+                        </h1>
+                        <div class="article-meta"><span>2 avr. 2025</span><span>7 min de
+                                lecture</span><span>Backend</span></div>
+                        <div class="article-body">
+                            <p>Les ORM simplifient l'accès aux données, mais les relations entre entités restent une
+                                source classique de bugs. Voici ce que j'ai appris en travaillant avec Prisma et
+                                TypeORM.</p>
+                            <h2>Le cas OneToMany</h2>
+                            <p>Le problème le plus courant : oublier le côté "Many" de la relation. Dans Prisma, une
+                                relation <code>User → Posts</code> requiert à la fois le champ <code>posts Post[]</code>
+                                sur User ET le champ <code>userId</code> + <code>user User</code> sur Post.</p>
+                            <pre>model User {
+  id    Int    @id @default(autoincrement())
+  posts Post[]
+}
+
+model Post {
+  id     Int  @id @default(autoincrement())
+  userId Int
+  user   User @relation(fields: [userId], references: [id])
+}</pre>
+                            <h2>Le cas ManyToMany</h2>
+                            <p>Avec une table de jointure implicite, Prisma gère tout. Mais dès qu'on a des données sur
+                                la relation (ex: une date d'ajout), il faut une table explicite. C'est là que les
+                                débutants se perdent.</p>
+                        </div>
+                    </div>
+
+                    <div class="article-view" id="article-nextjs-deploy">
+                        <div class="article-back" onclick="hideArticle()">← Retour aux articles</div>
+                        <h1 class="article-h1">Déployer une app Next.js avec Docker et GitHub Actions</h1>
+                        <div class="article-meta"><span>18 fév. 2025</span><span>10 min de
+                                lecture</span><span>DevOps</span></div>
+                        <div class="article-body">
+                            <p>Vercel est excellent, mais comprendre le déploiement manuel te donne un contrôle total et
+                                te prépare aux environnements d'entreprise. Voici comment j'ai mis en place ma pipeline.
+                            </p>
+                            <h2>Le Dockerfile</h2>
+                            <pre>FROM node:20-alpine AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
+
+FROM node:20-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
+CMD ["node", "server.js"]</pre>
+                            <h2>GitHub Actions</h2>
+                            <p>Le workflow se déclenche sur chaque push sur <code>main</code>, build l'image Docker, la
+                                push sur le registry, puis redémarre le container sur le serveur via SSH.</p>
+                        </div>
+                    </div>
+
+                    <div class="article-view" id="article-kondui-product">
+                        <div class="article-back" onclick="hideArticle()">← Retour aux articles</div>
+                        <h1 class="article-h1">KONDUI CI : construire un produit pour un marché informel</h1>
+                        <div class="article-meta"><span>3 jan. 2025</span><span>8 min de
+                                lecture</span><span>Produit</span></div>
+                        <div class="article-body">
+                            <p>Quand j'ai commencé à concevoir KONDUI CI, j'avais en tête un modèle simple : mettre en
+                                relation des chauffeurs et des employeurs. La réalité du marché ivoirien m'a rapidement
+                                rappelé à l'ordre.</p>
+                            <h2>Le vrai problème à résoudre</h2>
+                            <p>La confiance. Dans un marché où 70% des transactions se font de bouche à oreille, un
+                                profil en ligne ne suffit pas. Il a fallu réfléchir à des mécanismes de vérification
+                                d'identité, de notation mutuelle, et d'escrow pour les paiements.</p>
+                            <h2>Adapter le produit au contexte</h2>
+                            <p>L'interface mobile-first n'était pas un choix esthétique — c'était une nécessité. 90% des
+                                utilisateurs cibles utilisent uniquement leur téléphone. Chaque fonctionnalité a été
+                                pensée pour fonctionner avec une connexion limitée et sur des appareils d'entrée de
+                                gamme.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ════════════ CONTACT ════════════ -->
+                <div class="section" id="section-contact">
+                    <div class="page-header">
+                        <h2>Contact</h2>
+                        <p>Parlons de ton projet ou d'une collaboration.</p>
+                    </div>
+                    <div class="contact-grid">
+                        <div class="contact-main">
+                            <div class="contact-title">Envoie-moi un message</div>
+                            <p class="contact-sub">Disponible pour des missions freelance, collaborations techniques, ou
+                                simplement pour échanger sur un projet.</p>
+                            <div class="form-group">
+                                <label class="form-label">Nom</label>
+                                <input class="form-input" type="text" placeholder="Ton nom complet">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input class="form-input" type="email" placeholder="ton@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Sujet</label>
+                                <input class="form-input" type="text" placeholder="Mission freelance, collaboration...">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-input"
+                                    placeholder="Décris ton projet ou ta demande..."></textarea>
+                            </div>
+                            <button class="form-submit" onclick="handleSubmit(this)">Envoyer le message →</button>
+                        </div>
+                        <div class="contact-info">
+                            <div class="info-block">
+                                <div class="info-title">Réseaux</div>
+                                <div class="social-list">
+                                    <a class="social-item" href="https://instagram.com/forgeronduweb" target="_blank">
+                                        <div class="social-icon">📸</div>
+                                        <div>
+                                            <div class="social-name">Instagram</div>
+                                            <div class="social-handle">@forgeronduweb</div>
+                                        </div>
+                                        <span class="social-arrow">↗</span>
+                                    </a>
+                                    <a class="social-item" href="https://linkedin.com" target="_blank">
+                                        <div class="social-icon">💼</div>
+                                        <div>
+                                            <div class="social-name">LinkedIn</div>
+                                            <div class="social-handle">Evrard BAHO</div>
+                                        </div>
+                                        <span class="social-arrow">↗</span>
+                                    </a>
+                                    <a class="social-item" href="https://github.com" target="_blank">
+                                        <div class="social-icon">⌥</div>
+                                        <div>
+                                            <div class="social-name">GitHub</div>
+                                            <div class="social-handle">forgeronduweb</div>
+                                        </div>
+                                        <span class="social-arrow">↗</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-title">Disponibilité</div>
+                                <ul class="info-list">
+                                    <li>Missions freelance — Ouvert</li>
+                                    <li>Projets long terme — Selon agenda</li>
+                                    <li>Réponse sous 24h</li>
+                                    <li>Abidjan & remote</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /content -->
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
