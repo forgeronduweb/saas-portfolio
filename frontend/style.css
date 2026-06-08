@@ -481,8 +481,8 @@
   }
 
   .about-avatar {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 8px;
     background: linear-gradient(135deg, #1d4ed8, #7c3aed);
     display: flex;
